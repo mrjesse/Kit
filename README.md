@@ -1,4 +1,4 @@
-#![Kit](http://assets.gingergaming.com/img/kit/kit-logo.png)
+![Kit](http://assets.gingergaming.com/img/kit/kit-logo.png)
 
 # Getting Started
 Download the latest version of Kit at https://github.com/AxTo/Kit/releases/latest.
