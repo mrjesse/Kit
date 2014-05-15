@@ -12,3 +12,6 @@ Use one of the many functions by doing: `kit.functionName()`.
 # Documentation
 
 ... Content soon to come ...
+
+### Copyright & License ###
+Code and documentation copyright 2014 AxTo Inc. Code released under [the MIT license](https://github.com/AxTo/Kit/blob/master/LICENSE "The MIT License.").
