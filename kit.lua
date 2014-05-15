@@ -93,7 +93,7 @@ function explode(seperator, string)
         return false
     else
         for i in string.gmatch(string, seperator) do
-            table.append(i)
+            table.insert(table, i)
         end
         return table
     end
