@@ -21,7 +21,7 @@ end
 function wrapSides()
     local peripherals = periheral.getNames()
     for i = 1, #peripherals do
-        peripheral.getType(periList[i]) = peripheral.wrap(i)
+        peripheral.getType(peripherals[i]) = peripheral.wrap(i)
     end
     return i
 end
