@@ -1,11 +1,11 @@
 ![Kit](http://assets.gingergaming.com/img/kit/logo.png)
 
+Shorten your ComputerCraft lua code by using Kit! This library, or rather API, has all the functions you need to make your code shorter, better-looking and cooler.
+
 # Getting Started
-Download the latest version of Kit at https://github.com/AxTo/Kit/releases/latest.
+Download and install the latest version of Kit manually at https://github.com/AxTo/Kit/releases/latest, or use the pastebin install: `pastebin get xxxxxx install-kit`.
 
-Insert the `kit` file into your computer.
-
-Load the library in your file doing: `os.loadAPI("kit")`.
+Load the library in your file with a single line of code: `os.loadAPI("kit")`.
 
 Use one of the many functions by doing: `kit.functionName()`.
 
