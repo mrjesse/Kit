@@ -124,3 +124,32 @@ function keyPress(key, exitonfalse)
     end
   end
 end
+
+-- Generate a random hash (data response).
+-- Parameters:
+--  length: the length of the random hash (required).
+--  digits: use digits? (boolean) (optional).
+--  upper: use uppercase letters? (boolean) (optional).
+--  lower: use lowercase letters? (boolean) (optional).
+function random(length, digits, upper, lower)
+  if length == nil or length == "" then
+    return false
+  end
+  if digits == true then
+    digits = "on"
+  else
+    digits = "off"
+  end
+  if upper == true then
+    upper = "on"
+  else
+    upper = "off"
+  end
+  if lower == true then
+    lower = "on"
+  else
+    lower = "off"
+  end
+  hash = load("http://www.random.org/strings/?num=1&format=plain&len="..length.."&digits="..digits.."&upperalpha="..upper.."&loweralpha="..lower.."", true)
+  return hash
+end

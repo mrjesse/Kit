@@ -102,6 +102,21 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Result:     | If the key X is pressed: `true`, if not: `false`.|
 > __Heads Up:__ for a list of keyboard keys (including Enter, Space, etc) see [the CC wiki](http://computercraft.info/wiki/File:CC-Keyboard-Charcodes.png "Go to the ComputerCraft wiki"), or if the wiki is being DDOS'ed again [this image](http://i.imgur.com/iFRtlWL.png).
 
+### random(length, digits, upper, lower)
+
+|  cc 1.5 >  | Generate a random hash |
+|------------|--------------------------------------------------|
+|Responses:  | Data response *returns false if an error occurs.* |
+|Parameters: | _length_: the length of the random hash (required) (max. is 20). |
+|            | _digits_: use digits? (boolean) (optional). |
+|            | _upper_: use uppercase letters? (boolean) (optional). |
+|            | _lower_: use lowercase letters? (boolean) (optional). |
+|Example 1:  | `result = kit.random(10, true) print(result)` |
+|Result:	 | Example: `7381839149` |
+|Example 2:  | `result = kit.random(12, true, true, true) print(result)` |
+|Result:     | Example: `D9NqLaN1hkkHEU` |
+> __Heads Up:__ the random function uses the HTTP API, make sure to enable it in your CC Config.
+
 ## OpenKit Functions
 
 ### getPosition(player, side)
