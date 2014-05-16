@@ -104,7 +104,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 
 
-_Have any questions/suggestions about the documentation? Just [open an Issue](https://github.com/AxTo/Kit/issues/new "Open Issue Now")._
+*Have any questions/suggestions about the documentation, or do you have a function that __needs__ to be in Kit? Just [open an Issue](https://github.com/AxTo/Kit/issues/new "Open Issue Now"), or [do a Pull Request](https://github.com/AxTo/Kit/compare/ "Do a Pull Request Now").*
 
 ----------
 
