@@ -3,15 +3,17 @@
 Shorten your ComputerCraft lua code by using Kit! This library, or rather API, has all the functions you need to make your code shorter, better-looking and cooler.
 
 ### Getting Started ###
-Download and install the latest version of Kit manually at https://github.com/AxTo/Kit/releases/latest, or use the pastebin install: `pastebin get 8EmNXzQr install-kit`.
+Download and install the latest version of Kit manually at https://github.com/AxTo/Kit/releases/latest, or use the Pastebin installs.
 
-Load the library in your file with a single line of code: `os.loadAPI("kit")`.
+Pastebin install: `pastebin get 8EmNXzQr install-kit`.
 
-Use one of the many functions by doing: `kit.functionName()`.
+OpenKit pastebin install: `pastebin get xxxxxxxx install-kit`.
 
 ### Documentation ###
 
-... Content soon to come ...
+Load the library in your file with a single line of code: `os.loadAPI("kit")`. Use one of the many functions by doing: `kit.functionName()`. This also applies to OpenKit: `os.loadAPI("openKit")` and `openKit.functionName()`.
+
+*Work in progress...*
 
 ### Copyright & License ###
 Code and documentation copyright 2014 AxTo Inc. Code released under [the MIT license](https://github.com/AxTo/Kit/blob/master/LICENSE "The MIT License.").
