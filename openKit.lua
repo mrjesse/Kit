@@ -19,9 +19,9 @@ function getPosition(player, side)
     return false
   end
   p = peripheral.wrap(side)
-  xyz = {}
-  xyz[1] = p.getPlayerData(player).position.x
-  xyz[2] = p.getPlayerData(player).position.y
-  xyz[3] = p.getPlayerData(player).position.z
-  return xyz
+  pos = {}
+  pos["x"] = p.getPlayerData(player).position.x
+  pos["y"] = p.getPlayerData(player).position.y
+  pos["z"] = p.getPlayerData(player).position.z
+  return pos
 end
