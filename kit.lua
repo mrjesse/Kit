@@ -173,7 +173,7 @@ function dump(table)
   end
   result = ""
   for key, value in pairs(table) do
-    result = result..tostring(key)..": "..tostring(value).."\n"
+    result = result.."["..tostring(key).."]: \""..tostring(value).."\"\n"
   end
   return result
 end
