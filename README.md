@@ -7,6 +7,8 @@ Download and install the latest version of Kit manually at https://github.com/Ax
 - Pastebin install: `pastebin get 8EmNXzQr install-kit`.
 - OpenKit pastebin install: `pastebin get xxxxxxxx install-kit`.
 
+__Heads Up:__ The current version of Kit and OpenKit are unstable and thus not 100% working and ready for use yet.
+
 # Documentation
 
 ## Load the API
@@ -21,6 +23,7 @@ kit.functionName()
 This also applies to OpenKit: 
 ```
 os.loadAPI("openKit")
+
 openKit.functionName()
 ```
 
@@ -42,8 +45,9 @@ Below is a list of all functions in the Kit and OpenKit library.
 |------------|--------------------------------------------------|
 |Responses:  | Number of wrapped peripherals. *returns false if an error occurs.*|
 |Parameters: | None. 											|
-|Example:    | 													|
-|Result:     | 													|
+|Example:    | `result = kit.wrapSides() print(result)`			|
+|Result:     | If we've got a printer and a monitor: `2`		|
+__Heads Up:__ The result in numbers, is actually a string, do `tonumber(result)` to convert it to raw numbers again.
 
 ### isPresent(peripheral, side)
 
