@@ -1,6 +1,8 @@
 ![Kit](http://assets.gingergaming.com/img/kit/logo.png)
 
-Shorten your ComputerCraft lua code by using Kit! This library, or rather API, has all the functions you need to make your code shorter, better-looking and cooler.
+Shorten your ComputerCraft lua code by using Kit! This library, or rather API, has all the functions you need to make your code shorter, better-looking and faster to make.
+
+OpenKit has all the functions you need for programming with OpenPeripherials Addons, wich is a mod for ComputerCraft.
 
 # Getting Started
 Download and install the latest version of Kit manually at https://github.com/AxTo/Kit/releases/latest, or use the Pastebin installs.
