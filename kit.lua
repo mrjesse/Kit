@@ -83,24 +83,18 @@ end
 --  seperator: explode at this character (required).
 --  string: data to explode (required).
 function explode(seperator, string)
-    if seperator == "" or seperator == nil or string == "" or string == nil then
-        error("Invalid arguments for explode()")
-    else
-        table = {}
-        i = 1
-        inputstring = string
-        for str in string.gmatch(inputstring, "([^"..seperator.."]+)") do
-            table[i] = str
-            i = i + 1
-        end
-        return table
-        --[[
-        for i in string.gmatch(string, seperator) do
-            table.insert(table, i)
-        end
-        return table
-        ]]--
+  if seperator == "" or seperator == nil or string == "" or string == nil then
+    error("Invalid arguments for explode()")
+  else
+    table = {}
+    i = 1
+    inputstring = string
+    for str in string.gmatch(inputstring, "([^"..seperator.."]+)") do
+      table[i] = str
+      i = i + 1
     end
+    return table
+  end
 end
 
 
