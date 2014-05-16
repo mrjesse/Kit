@@ -89,6 +89,19 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Example:    | `result = kit.explode("#", "one#two#three#four")` |
 |Result:	 | Table: `result{ [1]=>"one", [2]=>"two", [3]=>"three", [4]=>"four" }` |
 
+### keyPress(key, exitonfalse)
+
+|  cc 1.5 >  | Wait for a keypress. |
+|------------|--------------------------------------------------|
+|Responses:  | Boolean (true or false) |
+|Parameters: | _key_: the keypress we should wait for (optional). |
+|            | _exitonfalse_: should the function return false if a keypress is not `key`? (optional). |
+|Example 1:  | `result = kit.keyPress("Q") print(result)` |
+|Result:	 | If the key Q is pressed: `true`, if not the function will keep waiting. |
+|Example 2:  | `result = kit.keyPress("X", true) print(result)` |
+|Result:     | If the key X is pressed: `true`, if not: `false`.|
+> __Heads Up:__ for a list of keyboard keys (including Enter, Space, etc) see [this page](http://computercraft.info/wiki/File:CC-Keyboard-Charcodes.png "Go to the ComputerCraft wiki").
+
 ## OpenKit Functions
 
 ### getPosition(player, side)

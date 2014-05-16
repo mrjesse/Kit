@@ -98,3 +98,29 @@ function explode(seperator, string)
         return table
     end
 end
+
+-- Wait for a keypress (boolean response).
+-- If key is not defined, every key triggers the action.
+-- Parameters:
+--  key: the keypress we should wait for (optional).
+--  exitonfalse: should the function return false if a keypress is not `key`? (optional).
+function keyPress(key, exitonfalse)
+  if key == "" or key == nil then
+    key = "any"
+  else
+    key = string.lower(key)
+  end
+  while true do
+    evt, char = os.pullEvent("char")
+    if key == "any" then
+      return true
+    else
+      char = string.lower(char)
+      if char == key then
+        return true
+      elseif exitonfalse == true then
+        return false
+      end
+    end
+  end
+end
