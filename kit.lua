@@ -30,18 +30,6 @@ function wrapSides()
     --if there arent any peripherals then there will be returnd a table which will be nil
 end
 
--- Checks if preipheral is present (boolean response).
--- Make sure that you don't provide an empty parameter.
--- Parameters:
---  peripheral: the wrapped peripheral to search for (required).
-function isPresent(peripheral)
-    if peripheral == nil then
-        return false
-    else
-        return true
-    end
-end
-
 -- Load a file or webpage (fetched data respponse).
 -- Parameters:
 --  path: the path to the file including the file name (required).
