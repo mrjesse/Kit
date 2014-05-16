@@ -103,5 +103,10 @@ Below is a list of all functions in the Kit and OpenKit library.
 > __Heads Up:__ Make sure that the specified player is within the range of the sensor.
 
 
+
+_Have any questions/suggestions about the documentation? Just [open an Issue](https://github.com/AxTo/Kit/issues/new "Open Issue Now")._
+
+----------
+
 # Copyright & License
 Code and documentation copyright 2014 AxTo Inc. Code released under [the MIT license](https://github.com/AxTo/Kit/blob/master/LICENSE "The MIT License.").
