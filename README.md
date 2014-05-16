@@ -47,7 +47,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 ### isAdvanced()
 
-| cc  1.5 > | Checks if computer is an advanced computer.|
+| cc  1.45 > | Checks if computer is an advanced computer.|
 | --------- | ------------------------------------------ |
 |Responses: | Boolean (true or false).					 |
 |Parameters:| None.										 |
@@ -58,7 +58,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 ### wrapSides()
 
-|  cc 1.6 >  | Checks all sides for peripherals and wraps them. |
+|  cc 1.5.1 >  | Checks all sides for peripherals and wraps them. |
 |------------|--------------------------------------------------|
 |Responses:  | Number of wrapped peripherals. *returns false if an error occurs.*|
 |Parameters: | None. 											|
@@ -70,7 +70,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 ### isPresent(peripheral, side)
 
-|  cc 1.5 >  | Checks if a preipheral is present. |
+|  cc 1.3 >  | Checks if a preipheral is present. |
 |------------|--------------------------------------------------|
 |Responses:  | Boolean (true or false). 					|
 |Parameters: | _peripheral_: the wrapped peripheral to search for (required). |
@@ -81,7 +81,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 ### load(path, isurl)
 
-|  cc 1.5 >  | Load a file or webpage. |
+|  cc 1.4 >  | Load a file or webpage. |
 |------------|--------------------------------------------------|
 |Responses:  | Fetched data response. *returns false if an error occurs.* |
 |Parameters: | _path_: the path to the file including the file name (required). |
@@ -93,7 +93,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 ### save(data, path, method)
 
-|  cc 1.5 >  | Save data to a file. |
+|  cc 1.0 >  | Save data to a file. |
 |------------|--------------------------------------------------|
 |Responses:  | Boolean (true or false). |
 |Parameters: | _data_: the text/code/table you want to save (required). |
@@ -106,7 +106,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 ### explode(seperator, string)
 
-|  cc 1.5 >  | Explode a string by seperator. |
+|  cc 1.0 >  | Explode a string by seperator. |
 |------------|--------------------------------------------------|
 |Responses:  | Table response. *returns false if an error occurs.* |
 |Parameters: | _seperator_: explode at the given character (required). |
@@ -118,7 +118,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 ### keyPress(key, exitonfalse)
 
-|  cc 1.5 >  | Wait for a keypress. |
+|  cc 1.0 >  | Wait for a keypress. |
 |------------|--------------------------------------------------|
 |Responses:  | Boolean (true or false) |
 |Parameters: | _key_: the keypress we should wait for (optional). |
@@ -133,7 +133,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 ### random(length, digits, upper, lower)
 
-|  cc 1.5 >  | Generate a random hash |
+|  cc 1.1 >  | Generate a random hash |
 |------------|--------------------------------------------------|
 |Responses:  | Data response *returns false if an error occurs.* |
 |Parameters: | _length_: the length of the random hash (required) (max. is 20). |
@@ -150,7 +150,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 
 ### dump(table)
 
-|  cc 1.5 >  | Dump a table. |
+|  cc 1.0 >  | Dump a table. |
 |------------|--------------------------------------------------|
 |Responses:  | Data response *returns false if an error occurs.* |
 |Parameters: | _table_: the table to dump (required). |
