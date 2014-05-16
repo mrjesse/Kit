@@ -20,10 +20,14 @@ end
 -- Checks all sides for peripherals and wraps them (number of wrapped sides response).
 function wrapSides()
     local peripherals = periheral.getNames()
+    local peripheralTable = {}
     for i = 1, #peripherals do
-        peripheral.getType(peripherals[i]) = peripheral.wrap(peripherals[i])
+        pripheralTable[i] = peripheral.wrap(peripherals[i])
+        return pripheralTable
+        --if there are peripherals attached it will return a table with all the peripherals
     end
-    return #peripherals
+    return peripheralTable
+    --if there arent any peripherals then there will be returnd a table which will be nil
 end
 
 -- Checks if preipheral is present (boolean response).
