@@ -88,16 +88,26 @@ end
 --  seperator: explode at this character (required).
 --  string: data to explode (required).
 function explode(seperator, string)
-    local table = {}
     if seperator == "" or seperator == nil or string == "" or string == nil then
         return false
     else
+        table = {}
+        i = 1
+        inputstring = string
+        for str in string.gmatch(inputstring, "([^"..seperator.."]+)") do
+            table[i] = str
+            i = i + 1
+        end
+        return table
+        --[[
         for i in string.gmatch(string, seperator) do
             table.insert(table, i)
         end
         return table
+        ]]--
     end
 end
+
 
 -- Wait for a keypress (boolean response).
 -- If key is not defined, every key triggers the action.
