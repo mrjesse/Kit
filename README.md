@@ -10,7 +10,19 @@ Download and install the latest version of Kit manually at https://github.com/Ax
 # Documentation
 
 ## Load the API
-Load the library in your file with a single line of code: `os.loadAPI("kit")`. Use one of the many functions by doing: `kit.functionName()`. This also applies to OpenKit: `os.loadAPI("openKit")` and `openKit.functionName()`.
+Load the library in your file with a single line of code: 
+```
+os.loadAPI("kit")
+``` 
+Use one of the many functions by doing: 
+```
+kit.functionName()
+```
+This also applies to OpenKit: 
+```
+os.loadAPI("openKit")
+openKit.functionName()
+```
 
 ## Kit Functions
 Below is a list of all functions in the Kit and OpenKit library.
