@@ -44,7 +44,7 @@ end
 --  isurl: if path is an URL. Use 'true' if path is an URL (optional).
 function load(path, isurl)
   if path == "" or path == nil then
-      return false
+      error("Invalid arguments for load()")
   end
   if isurl == true then
     local file = http.get(path)
@@ -71,7 +71,7 @@ end
 --    "a" to open for writing but keep existing data and append any writes to the end of the file.
 function save(data, path, method)
   if data == "" or data == nil or path == "" or path == nil or method == "" or method == nil then
-      return false
+      error("Invalid arguments for save()")
   end
   if method == "w" or method == "a" then
     local file = fs.open(path, method)
@@ -89,7 +89,7 @@ end
 --  string: data to explode (required).
 function explode(seperator, string)
     if seperator == "" or seperator == nil or string == "" or string == nil then
-        return false
+        error("Invalid arguments for explode()")
     else
         table = {}
         i = 1
@@ -143,7 +143,7 @@ end
 --  lower: use lowercase letters? (boolean) (optional).
 function random(length, digits, upper, lower)
   if length == nil or length == "" then
-    return false
+    error("Invalid arguments for random()")
   end
   if digits == true then
     digits = "on"
@@ -169,7 +169,7 @@ end
 --  table: the table to dump (required).
 function dump(table)
   if table == nil or table == "" or type(table) ~= "table" then
-    return false
+    error("Invalid arguments for dump()")
   end
   result = ""
   for key, value in pairs(table) do
