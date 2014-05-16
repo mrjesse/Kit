@@ -30,6 +30,21 @@ openKit.functionName()
 ## Kit Functions
 Below is a list of all functions in the Kit and OpenKit library.
 
+
+### Table of Contents
+
+| [Kit Functions](https://github.com/AxTo/Kit/blob/master/README.md#kit-functions) | [OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions)
+|-------| --- | ---
+| [isAdvanced()](https://github.com/AxTo/Kit/blob/master/README.md#isadvanced)| [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)|
+| [wrapSides()](https://github.com/AxTo/Kit/blob/master/README.md#wrapsides)|
+| [isPresent()](https://github.com/AxTo/Kit/blob/master/README.md#ispresentperipheral-side)|
+| [load()](https://github.com/AxTo/Kit/blob/master/README.md#loadpath-isurl)|
+| [save()](https://github.com/AxTo/Kit/blob/master/README.md#savedata-path-method)|
+| [explode()](https://github.com/AxTo/Kit/blob/master/README.md#explodeseperator-string)|
+| [keyPress()](https://github.com/AxTo/Kit/blob/master/README.md#keypresskey-exitonfalse)|
+| [random()](https://github.com/AxTo/Kit/blob/master/README.md#randomlength-digits-upper-lower)|
+
+
 ### isAdvanced()
 
 | cc  1.5 > | Checks if computer is an advanced computer.|
