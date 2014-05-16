@@ -5,7 +5,7 @@ Shorten your ComputerCraft lua code by using Kit! This library, or rather API, h
 # Getting Started
 Download and install the latest version of Kit manually at https://github.com/AxTo/Kit/releases/latest, or use the Pastebin installs.
 - Pastebin install: `pastebin get 8EmNXzQr install-kit`.
-- OpenKit pastebin install: `pastebin get xxxxxxxx install-kit`.
+- OpenKit pastebin install: `pastebin get eqdNPkkb install-kit`.
 
 > __Heads Up:__ The current versions of Kit and OpenKit are unstable and thus not 100% working and ready for use yet.
 
