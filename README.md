@@ -54,6 +54,8 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Example:   | `print( kit.isAdvanced() )`				 |
 |Result:    | `true` or `false`							 |
 
+----------
+
 ### wrapSides()
 
 |  cc 1.6 >  | Checks all sides for peripherals and wraps them. |
@@ -64,6 +66,8 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Result:     | If we've got a printer and a monitor: `2`		|
 > __Heads Up:__ The result in numbers, is actually a string, do `tonumber(result)` to convert it to raw numbers again.
 
+----------
+
 ### isPresent(peripheral, side)
 
 |  cc 1.5 >  | Checks if a preipheral is present. |
@@ -72,6 +76,8 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Parameters: | _peripheral_: the wrapped peripheral to search for (required). |
 |Example:    | `print( kit.isPresent("monitor", "left") )` |
 |Result:     | `true` or `false`							 |
+
+----------
 
 ### load(path, isurl)
 
@@ -82,6 +88,8 @@ Below is a list of all functions in the Kit and OpenKit library.
 |            | _isurl_: Use `true` if _path_ is an URL (optional). |
 |Example:    | `result = kit.load("hello.txt") print(result)`|
 |Result:	 | Contents of `hello.txt`.									|
+
+----------
 
 ### save(data, path, method)
 
@@ -94,6 +102,8 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Example:    | `result = kit.save("Hello World!", "hello.txt", "a") print(result)` |
 |Result:	 | `true` if the operation succeeded, or `false` if something went wrong. |
 
+----------
+
 ### explode(seperator, string)
 
 |  cc 1.5 >  | Explode a string by seperator. |
@@ -103,6 +113,8 @@ Below is a list of all functions in the Kit and OpenKit library.
 |            | _string_: data to explode (required). |
 |Example:    | `result = kit.explode("#", "one#two#three#four")` |
 |Result:	 | Table: `result{ [1]=>"one", [2]=>"two", [3]=>"three", [4]=>"four" }` |
+
+----------
 
 ### keyPress(key, exitonfalse)
 
@@ -116,6 +128,8 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Example 2:  | `result = kit.keyPress("X", true) print(result)` |
 |Result:     | If the key X is pressed: `true`, if not: `false`.|
 > __Heads Up:__ for a list of keyboard keys (including Enter, Space, etc) see [the CC wiki](http://computercraft.info/wiki/File:CC-Keyboard-Charcodes.png "Go to the ComputerCraft wiki"), or if the wiki is being DDOS'ed again [this image](http://i.imgur.com/iFRtlWL.png).
+
+----------
 
 ### random(length, digits, upper, lower)
 
@@ -132,6 +146,8 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Result:     | Example: `D9NqLaN1hkkHEU` |
 > __Heads Up:__ the random function uses the HTTP API, make sure to enable it in your CC Config.
 
+----------
+
 ## OpenKit Functions
 
 ### getPosition(player, side)
@@ -144,6 +160,8 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Example:    | `result = openKit.getPosition("alex", "right")` |
 |Result:	 | Table: `result{ ["x"]=>"3", ["y"]=>"0", ["z"]=>"2" }` |
 > __Heads Up:__ Make sure that the specified player is within the range of the sensor.
+
+----------
 
 
 
