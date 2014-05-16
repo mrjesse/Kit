@@ -21,9 +21,9 @@ end
 function wrapSides()
     local peripherals = periheral.getNames()
     for i = 1, #peripherals do
-        peripheral.getType(peripherals[i]) = peripheral.wrap(i)
+        peripheral.getType(peripherals[i]) = peripheral.wrap(peripherals[i])
     end
-    return i
+    return #peripherals
 end
 
 -- Checks if preipheral is present (boolean response).
