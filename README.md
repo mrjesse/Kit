@@ -37,7 +37,6 @@ Below is a list of all functions in the Kit and OpenKit library.
 |-------| --- | ---
 | [isAdvanced()](https://github.com/AxTo/Kit/blob/master/README.md#isadvanced)| [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)|
 | [wrapSides()](https://github.com/AxTo/Kit/blob/master/README.md#wrapsides)|
-| [isPresent()](https://github.com/AxTo/Kit/blob/master/README.md#ispresentperipheral-side)|
 | [load()](https://github.com/AxTo/Kit/blob/master/README.md#loadpath-isurl)|
 | [save()](https://github.com/AxTo/Kit/blob/master/README.md#savedata-path-method)|
 | [explode()](https://github.com/AxTo/Kit/blob/master/README.md#explodeseperator-string)|
@@ -65,17 +64,6 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Example:    | `result = kit.wrapSides() print(result)`			|
 |Result:     | If we've got a printer and a monitor: `2`		|
 > __Heads Up:__ The result in numbers, is actually a string, do `tonumber(result)` to convert it to raw numbers again.
-
-----------
-
-### isPresent(peripheral, side)
-
-|  cc 1.3 >  | Checks if a preipheral is present. |
-|------------|--------------------------------------------------|
-|Responses:  | Boolean (true or false). 					|
-|Parameters: | _peripheral_: the wrapped peripheral to search for (required). |
-|Example:    | `print( kit.isPresent("monitor", "left") )` |
-|Result:     | `true` or `false`							 |
 
 ----------
 
