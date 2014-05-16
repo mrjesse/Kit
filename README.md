@@ -155,7 +155,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Responses:  | Data response *returns false if an error occurs.* |
 |Parameters: | _table_: the table to dump (required). |
 |Example 1:  | `result = kit.dump(myTable) print(result)` |
-|Result:     | Example: `1: "one", 2: "two", 3: "three",` |
+|Result:     | Example: `[1]: "one", [2]: "two", [3]: "three",` |
 > __Heads Up:__ this function is mainly used for debugging purposes, to unserialize a table, use `textutils.serialize(myTable)`.
 
 ----------
