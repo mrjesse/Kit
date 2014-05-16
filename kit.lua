@@ -163,3 +163,17 @@ function random(length, digits, upper, lower)
   hash = load("http://www.random.org/strings/?num=1&format=plain&len="..length.."&digits="..digits.."&upperalpha="..upper.."&loweralpha="..lower.."", true)
   return hash
 end
+
+-- Dump a Table (data response).
+-- Parameters:
+--  table: the table to dump (required).
+function dump(table)
+  if table == nil or table == "" or type(table) ~= "table" then
+    return false
+  end
+  result = ""
+  for key, value in pairs(table) do
+    result = result..tostring(key)..": "..tostring(value).."\n"
+  end
+  return result
+end

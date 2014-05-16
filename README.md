@@ -43,7 +43,7 @@ Below is a list of all functions in the Kit and OpenKit library.
 | [explode()](https://github.com/AxTo/Kit/blob/master/README.md#explodeseperator-string)|
 | [keyPress()](https://github.com/AxTo/Kit/blob/master/README.md#keypresskey-exitonfalse)|
 | [random()](https://github.com/AxTo/Kit/blob/master/README.md#randomlength-digits-upper-lower)|
-
+| [dump()](https://github.com/AxTo/Kit/blob/master/README.md#dumptable)|
 
 ### isAdvanced()
 
@@ -145,6 +145,18 @@ Below is a list of all functions in the Kit and OpenKit library.
 |Example 2:  | `result = kit.random(12, true, true, true) print(result)` |
 |Result:     | Example: `D9NqLaN1hkkHEU` |
 > __Heads Up:__ the random function uses the HTTP API, make sure to enable it in your CC Config.
+
+----------
+
+### dump(table)
+
+|  cc 1.5 >  | Dump a table. |
+|------------|--------------------------------------------------|
+|Responses:  | Data response *returns false if an error occurs.* |
+|Parameters: | _table_: the table to dump (required). |
+|Example 1:  | `result = kit.dump(myTable) print(result)` |
+|Result:     | Example: `1: "one", 2: "two", 3: "three",` |
+> __Heads Up:__ this function is mainly used for debugging purposes, to unserialize a table, use `textutils.serialize(myTable)`.
 
 ----------
 
