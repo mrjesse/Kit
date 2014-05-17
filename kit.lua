@@ -165,3 +165,30 @@ function dump(table)
   end
   return result
 end
+
+-- Output all functions of given API.
+-- Parameters:
+--  api: the library/api to scan (required).
+function scanAPI(api)
+  if api == nil or api == "" or type(api) ~= "table" then
+    error("Invalid arguments for scanAPI()")
+  end
+  i = 1
+  result = {}
+  for fname, obj in pairs(api) do
+    if type(obj) == "function" then
+      result[i] = fname
+      i = i + 1
+    end
+  end
+  return result
+end
+
+-- Output all the functions of Kit.
+function help()
+  result = kit.scanAPI(kit)
+  result = kit.dump(result)
+  term.setCursorPos(1,1)
+  term.clear()
+  return "Welcome to Kit!\nVisit git.io/kitdocs for the documentation.\n\nHere's a list of all the functions you can use:\n"..result
+end
