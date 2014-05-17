@@ -10,16 +10,20 @@
 -- Now call a function from this file using:
 -- guiKit.functionName()
 
---Draw a rectangle (Boolean response).
+-- Draw a rectangle (Boolean response).
+-- Make sure to use number colors, and not named colors!
 -- Parameters: 
---  startX: The starting X pos of the square (number)
---  startY: The starting Y pos of the square (number)
---  width:  The width of the square (number)
---  height: The height of the square (number)
---  color: The color of the square or nil if you want an outlined square (number or nil)
---  fillingColor: The color of the filling or nil if you just want a regular square (number or nil)
---  outlineColor: The color of the outline or nil if you want a regular square (number or nil)
+--  startX: The starting X pos of the square (number) (required).
+--  startY: The starting Y pos of the square (number) (required).
+--  width:  The width of the square (number) (required).
+--  height: The height of the square (number) (required).
+--  color: The color of the square or nil if you want an outlined square (number or nil).
+--  fillingColor: The color of the filling or nil if you just want a regular square (number or nil).
+--  outlineColor: The color of the outline or nil if you want a regular square (number or nil).
 function drawRectangle(startX,startY,width,hight,color,fillingColor,outlineColor)
+  if startX == nil or startX == "" or startY == nil or startY == "" or width == nil or width == "" then
+    error("Invalid arguments for drawRectangle()")
+  end
   if color ~= nil then
       local window = window.create(term.current(), startX, startY, width ,hight , true)
       window.setBackgroundColor(color)
@@ -39,7 +43,7 @@ function drawRectangle(startX,startY,width,hight,color,fillingColor,outlineColor
 term.setCursorPos(startX,startY)
 end
 
---Draw Button And Make It Functioning (Boolean response).
+-- Draw Button And Make It Functioning (Boolean response).
 -- Parameters:
 --  startX: Where you want to start your button on the x axis (number)
 --  startY: Where you want to start your button on the y axis (number)
