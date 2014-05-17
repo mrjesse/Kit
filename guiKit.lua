@@ -1,3 +1,16 @@
+-- GuiKit v1.0 unstable dist. API
+-- cuase alex cant be arsed to do the leagl stuff himself
+-- Copyright AxTo Inc. Released under the MIT License.
+
+-- Made for ComputerCraft 1.6 and OpenPeripherials Addons.
+-- Use this file in combination with the normal Kit!
+
+-- How to include the API in your file (assuming that this file is called "openKit"):
+-- os.loadAPI("kit")
+-- os.loadAPI("guiKit")
+-- Now call a function from this file using:
+-- guiKit.functionName()
+
 --Draw a rectangle
 -- Parameters: 
 --  startX: The starting X pos of the square (number)
