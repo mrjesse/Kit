@@ -25,3 +25,15 @@ function getPosition(player, side)
   pos["z"] = p.getPlayerData(player).position.z
   return pos
 end
+
+--checks if current the values of "pos" are inside of the "box" (dimensions) (boolean response)
+--parameters: 
+--  pos : the x, y and z values you are checking for
+--  dimensions : the "box" you are checking for
+function checkPos(pos, dimensions)
+  if pos["x"] > dimensions["-x"] and pos["x"] < dimensions["+x"] and pos["y"] > dimensions["-y"] and      pos["y"] < dimensions["+y"] and pos["z"] > dimensions["-z"] and pos["z"] < dimensions["+z"] then
+    return true
+  else
+    return false
+  end
+end
