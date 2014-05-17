@@ -8,6 +8,7 @@ OpenKit has all the functions you need for programming with OpenPeripherials Add
 Download and install the latest version of Kit manually at https://github.com/AxTo/Kit/releases/latest, or use the Pastebin installs.
 - Pastebin install: `pastebin get 8EmNXzQr install-kit`.
 - OpenKit pastebin install: `pastebin get eqdNPkkb install-openkit`.
+- GuiKit pastebin install: `pastebin get xxxxxxxx install-guikit`
 
 > __Heads Up:__ The current versions of Kit and OpenKit are unstable and thus not 100% working and ready for use yet.
 
@@ -22,29 +23,33 @@ Use one of the many functions by doing:
 ```
 kit.functionName()
 ```
-This also applies to OpenKit: 
+This also applies to OpenKit and GuiKit: 
 ```
 os.loadAPI("openKit")
-
 openKit.functionName()
+
+os.loadAPI("guiKit")
+guiKit.functionName()
 ```
 
 ## Kit Functions
-Below is a list of all functions in the Kit and OpenKit library.
+Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
 
 
 ### Table of Contents
 
-| [Kit Functions](https://github.com/AxTo/Kit/blob/master/README.md#kit-functions) | [OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions)
-|-------| --- | ---
-| [isAdvanced()](https://github.com/AxTo/Kit/blob/master/README.md#isadvanced)| [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)|
-| [wrapSides()](https://github.com/AxTo/Kit/blob/master/README.md#wrapsides)|
+| [Kit Functions](https://github.com/AxTo/Kit/blob/master/README.md#kit-functions) | [OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions) | GuiKit Functions
+|-------| --- | --- | ---
+| [isAdvanced()](https://github.com/AxTo/Kit/blob/master/README.md#isadvanced)| [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)| drawRectangle()
+| [wrapSides()](https://github.com/AxTo/Kit/blob/master/README.md#wrapsides)| | button()
 | [load()](https://github.com/AxTo/Kit/blob/master/README.md#loadpath-isurl)|
 | [save()](https://github.com/AxTo/Kit/blob/master/README.md#savedata-path-method)|
 | [explode()](https://github.com/AxTo/Kit/blob/master/README.md#explodeseperator-string)|
 | [keyPress()](https://github.com/AxTo/Kit/blob/master/README.md#keypresskey-exitonfalse)|
 | [random()](https://github.com/AxTo/Kit/blob/master/README.md#randomlength-digits-upper-lower)|
 | [dump()](https://github.com/AxTo/Kit/blob/master/README.md#dumptable)|
+| scanAPI()
+| help()
 
 ### isAdvanced()
 
