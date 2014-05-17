@@ -8,7 +8,7 @@ OpenKit has all the functions you need for programming with OpenPeripherials Add
 Download and install the latest version of Kit manually at https://github.com/AxTo/Kit/releases/latest, or use the Pastebin installs.
 - Pastebin install: `pastebin get 8EmNXzQr install-kit`.
 - OpenKit pastebin install: `pastebin get eqdNPkkb install-openkit`.
-- GuiKit pastebin install: `pastebin get xxxxxxxx install-guikit`
+- GuiKit pastebin install: `pastebin get guJxNvsS install-guikit`
 
 > __Heads Up:__ The current versions of Kit, OpenKit and GuiKit are unstable and thus not 100% working and ready for use yet.
 
