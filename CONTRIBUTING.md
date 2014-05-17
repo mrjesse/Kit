@@ -39,4 +39,28 @@ How to reproduce:
 ```
 
 ## Feature suggestions
-Feature suggestions should go in a Pull Request. Please open an issue if you plan to develop it or want to go through optimalisation discussion and review before making progress. **Issues such as `It would be nice to support XXX` are useful to no one, use the documentation page.**
+Feature suggestions should go in a Pull Request. Please open an issue if you plan to develop it or want to go through optimalisation discussion and review before making progress. **Issues such as `It would be nice to support XXX` are useful to no one, use the example below for feature suggestions.**
+
+Here is what a great feature suggestion issue would look like:
+```
+
+**Title:** New function myFunction
+**CC version x.x >**
+**Made for Kit/OpenKit/GuiKit**
+
+*What does your function do?*
+
+*Why should your function be implemented in Kit/OpenKit/GuiKit?* 
+
+*Make sure that you include documentation for your new function!*
+
+Here's my function:
+
+  function myFunction
+    return "Hello world!"
+  end
+
+  
+```
+
+
