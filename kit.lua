@@ -97,7 +97,6 @@ function explode(seperator, string)
   end
 end
 
-
 -- Wait for a keypress (boolean response).
 -- If key is not defined, every key triggers the action.
 -- Parameters:
