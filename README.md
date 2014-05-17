@@ -48,7 +48,7 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
 | [keyPress()](https://github.com/AxTo/Kit/blob/master/README.md#keypresskey-exitonfalse)|
 | [random()](https://github.com/AxTo/Kit/blob/master/README.md#randomlength-digits-upper-lower)|
 | [dump()](https://github.com/AxTo/Kit/blob/master/README.md#dumptable)|
-| scanAPI()
+| [scanAPI()](https://github.com/AxTo/Kit/blob/master/README.md#scanapiapi)
 | help()
 | clear()
 
@@ -156,8 +156,14 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
 
 ----------
 
-### scanAPI()
+### scanAPI(api)
 
+|  cc 1.0 >  | Output all functions of given API. |
+|------------|--------------------------------------------------|
+|Responses:  | Table response *returns false if an error occurs.* |
+|Parameters: | _api_: the library/api to scan. |
+|Example 1:  | `result = kit.scanAPI(myAPI) print( kit.dump(result) )` |
+|Result:     | Example: `[1]: "myFunction", [2]: "secondFunction", [3]: "anotherFunction",` |
 
 ----------
 
@@ -165,7 +171,7 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
 
 ----------
 
-### clear()
+### clear(screen, pos1, pos2)
 
 ----------
 
