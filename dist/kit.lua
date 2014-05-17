@@ -19,7 +19,7 @@ end
 
 -- Checks all sides for peripherals and wraps them (number of wrapped sides response).
 function wrapSides()
-    local peripherals = periheral.getNames()
+    local peripherals = peripheral.getNames()
     local peripheralTable = {}
     for i = 1, #peripherals do
         pripheralTable[i] = peripheral.wrap(peripherals[i])
