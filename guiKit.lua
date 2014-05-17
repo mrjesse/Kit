@@ -1,5 +1,4 @@
 -- GuiKit v1.0 unstable dist. API
--- cuase alex cant be arsed to do the leagl stuff himself
 -- Copyright AxTo Inc. Released under the MIT License.
 
 -- Made for ComputerCraft 1.6.
@@ -11,7 +10,7 @@
 -- Now call a function from this file using:
 -- guiKit.functionName()
 
---Draw a rectangle
+--Draw a rectangle (Boolean response).
 -- Parameters: 
 --  startX: The starting X pos of the square (number)
 --  startY: The starting Y pos of the square (number)
@@ -20,7 +19,6 @@
 --  color: The color of the square or nil if you want an outlined square (number or nil)
 --  fillingColor: The color of the filling or nil if you just want a regular square (number or nil)
 --  outlineColor: The color of the outline or nil if you want a regular square (number or nil)
-
 function drawRectangle(startX,startY,width,hight,color,fillingColor,outlineColor)
   if color ~= nil then
       local window = window.create(term.current(), startX, startY, width ,hight , true)
@@ -41,7 +39,7 @@ function drawRectangle(startX,startY,width,hight,color,fillingColor,outlineColor
 term.setCursorPos(startX,startY)
 end
 
---Draw Button And Make It Functioning:
+--Draw Button And Make It Functioning (Boolean response).
 -- Parameters:
 --  startX: Where you want to start your button on the x axis (number)
 --  startY: Where you want to start your button on the y axis (number)
@@ -54,7 +52,6 @@ end
 --  textY: Where you want your text to start on the y axis (number)
 --  text: The text that will be displayed (string)
 --  waitForClick: If you want to wait for the user to click on your button (true or false)
-
 function button(startX,startY,width,height,backgroundColor,textColor,flickerOnClick,textX,textY,text,waitForClick)
     drawRectangle(startX,startY,width,height,backgroundColor,nil,nil)
     term.setCursorPos(textX,textY)
@@ -62,21 +59,20 @@ function button(startX,startY,width,height,backgroundColor,textColor,flickerOnCl
     term.setTextColor(textColor)
     print(text)
     if waitForClick == true then
-    local event,mouse,clickX,clickY= os.pullEvent("mouse_click")
-
-    if clickX > startX - 1 and clickY > startY -1 and clickX < width+1 and clickY < height + 1 then
-        if flickerOnClick == true then
-            sleep(0.2)
-            drawRectangle(startX,startY,width,height,16,nil,nil)
-            term.setCursorPos(textX,textY)
-            term.setBackgroundColor(16)
-            term.setTextColor(textColor)
-            print(text)
-            sleep(0.2)
-            return true
-        else
-        return false
-    end
-    end
-end
+      local event,mouse,clickX,clickY= os.pullEvent("mouse_click")
+      if clickX > startX - 1 and clickY > startY -1 and clickX < width+1 and clickY < height + 1 then
+          if flickerOnClick == true then
+              sleep(0.2)
+              drawRectangle(startX,startY,width,height,16,nil,nil)
+              term.setCursorPos(textX,textY)
+              term.setBackgroundColor(16)
+              term.setTextColor(textColor)
+              print(text)
+              sleep(0.2)
+              return true
+          else
+            return false
+        end
+      end
+  end
 end
