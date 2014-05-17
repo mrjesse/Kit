@@ -10,24 +10,22 @@
 
 -- Chceks if computer is an advanced computer (boolean response).
 function isAdvanced()
-    if term.isColor() == false then
-        return false
-    else
-        return true
-    end
+  if term.isColor() == false then
+    return false
+  else
+    return true
+  end
 end
 
 -- Checks all sides for peripherals and wraps them (number of wrapped sides response).
 function wrapSides()
-    local peripherals = peripheral.getNames()
-    local peripheralTable = {}
-    for i = 1, #peripherals do
-        pripheralTable[i] = peripheral.wrap(peripherals[i])
-        return pripheralTable
-        --if there are peripherals attached it will return a table with all the peripherals
-    end
-    return peripheralTable
-    --if there arent any peripherals then there will be returnd a table which will be nil
+  local peripherals = peripheral.getNames()
+  local peripheralTable = {}
+  for i = 1, #peripherals do
+    pripheralTable[i] = peripheral.wrap(peripherals[i])
+    return pripheralTable
+  end
+  return peripheralTable
 end
 
 -- Load a file or webpage (fetched data respponse).
@@ -36,7 +34,7 @@ end
 --  isurl: if path is an URL. Use 'true' if path is an URL (optional).
 function load(path, isurl)
   if path == "" or path == nil then
-      error("Invalid arguments for load()")
+    error("Invalid arguments for load()")
   end
   if isurl == true then
     local file = http.get(path)
@@ -66,7 +64,7 @@ end
 --    "a" to open for writing but keep existing data and append any writes to the end of the file.
 function save(data, path, method)
   if data == "" or data == nil or path == "" or path == nil or method == "" or method == nil then
-      error("Invalid arguments for save()")
+    error("Invalid arguments for save()")
   end
   if method == "w" or method == "a" then
     local file = fs.open(path, method)

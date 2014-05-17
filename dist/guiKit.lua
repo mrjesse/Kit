@@ -25,22 +25,22 @@ function drawRectangle(startX,startY,width,hight,color,fillingColor,outlineColor
     error("Invalid arguments for drawRectangle()")
   end
   if color ~= nil then
-      local window = window.create(term.current(), startX, startY, width ,hight , true)
-      window.setBackgroundColor(color)
-      window.clear()
+    local window = window.create(term.current(), startX, startY, width ,hight , true)
+    window.setBackgroundColor(color)
+    window.clear()
   else
-      if outlineColor ~= nil then
-          local windowOutline = window.create(term.current(), startX, startY, width, hight, true)
-          windowOutline.setBackgroundColor(outlineColor)
-          windowOutline.clear()
-          if fillingColor ~= nil then
-            local windowFilling = window.create(term.current(), startX+1, startY+1, width-2 ,hight-2 , true)
-            windowFilling.setBackgroundColor(fillingColor)
-            windowFilling.clear()
-          end
+    if outlineColor ~= nil then
+      local windowOutline = window.create(term.current(), startX, startY, width, hight, true)
+      windowOutline.setBackgroundColor(outlineColor)
+      windowOutline.clear()
+      if fillingColor ~= nil then
+        local windowFilling = window.create(term.current(), startX+1, startY+1, width-2 ,hight-2 , true)
+        windowFilling.setBackgroundColor(fillingColor)
+        windowFilling.clear()
       end
+    end
   end
-term.setCursorPos(startX,startY)
+  term.setCursorPos(startX,startY)
 end
 
 -- Draw Button And Make It Functioning (Boolean response).
@@ -57,29 +57,29 @@ end
 --  text: The text that will be displayed (string) (required).
 --  waitForClick: If you want to wait for the user to click on your button (true or false) (required).
 function button(startX,startY,width,height,backgroundColor,textColor,flickerOnClick,textX,textY,text,waitForClick)
-    if startX == nil or startX == "" or startY == nil or startY == "" or width == nil or width == "" or height == nil or height == "" or backgroundColor == nil or backgroundColor == "" or textColor == nil or textColor == "" or flickerOnClick == nil or flickerOnClick == "" or textX == nil or textX == "" or textY == nil or textY == "" or text == nil or text == "" or waitForClick == nil or waitForClick == "" then
-      error("Invalid arguments for button()")
-    end
-    drawRectangle(startX,startY,width,height,backgroundColor,nil,nil)
-    term.setCursorPos(textX,textY)
-    term.setBackgroundColor(backgroundColor)
-    term.setTextColor(textColor)
-    print(text)
-    if waitForClick == true then
-      local event,mouse,clickX,clickY= os.pullEvent("mouse_click")
-      if clickX > startX - 1 and clickY > startY -1 and clickX < width+1 and clickY < height + 1 then
-          if flickerOnClick == true then
-              sleep(0.2)
-              drawRectangle(startX,startY,width,height,16,nil,nil)
-              term.setCursorPos(textX,textY)
-              term.setBackgroundColor(16)
-              term.setTextColor(textColor)
-              print(text)
-              sleep(0.2)
-              return true
-          else
-            return false
-        end
+  if startX == nil or startX == "" or startY == nil or startY == "" or width == nil or width == "" or height == nil or height == "" or backgroundColor == nil or backgroundColor == "" or textColor == nil or textColor == "" or flickerOnClick == nil or flickerOnClick == "" or textX == nil or textX == "" or textY == nil or textY == "" or text == nil or text == "" or waitForClick == nil or waitForClick == "" then
+    error("Invalid arguments for button()")
+  end
+  drawRectangle(startX,startY,width,height,backgroundColor,nil,nil)
+  term.setCursorPos(textX,textY)
+  trm.setBackgroundColor(backgroundColor)
+  term.setTextColor(textColor)
+  print(text)
+  if waitForClick == true then
+    local event,mouse,clickX,clickY= os.pullEvent("mouse_click")
+    if clickX > startX - 1 and clickY > startY -1 and clickX < width+1 and clickY < height + 1 then
+      if flickerOnClick == true then
+        sleep(0.2)
+        drawRectangle(startX,startY,width,height,16,nil,nil)
+        term.setCursorPos(textX,textY)
+        term.setBackgroundColor(16)
+        term.setTextColor(textColor)
+        print(text)
+        sleep(0.2)
+        return true
+      else
+        return false
       end
+    end
   end
 end
