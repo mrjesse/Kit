@@ -192,3 +192,20 @@ function help()
   term.clear()
   return "Welcome to Kit!\nVisit git.io/kitdocs for the documentation.\n\nHere's a list of all the functions you can use:\n"..result
 end
+
+-- Clear your screen and sets your cursor position (boolean response).
+-- Paremeters: 
+--  screen: what screen you want to clear (required).
+--  pos1, pos2: place you want your cursor to be at after the screen clears (optional).
+function clear(screen, pos1, pos2)
+  if screen == nil or screen == "" then
+    error("Invalid arguments for clear()")
+  end
+  if pos1 == nil or pos1 == "" and pos2 == nil or pos2 == "" then
+    pos1 = 1
+    pos2 = 1
+  end
+  screen.clear()
+  screen.setCursorPos(pos1, pos2)
+  return true
+end
