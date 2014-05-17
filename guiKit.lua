@@ -45,18 +45,21 @@ end
 
 -- Draw Button And Make It Functioning (Boolean response).
 -- Parameters:
---  startX: Where you want to start your button on the x axis (number)
---  startY: Where you want to start your button on the y axis (number)
---  width: How wide you want your button to be (number)
---  height: How high you want your button to be (number)
---  backgroundColor: What color you want your button to be (number)
---  textColor: What color you want your text to be (number)
---  flickerOnClick: If the button will turn yellow and back to the backgroundColor (true or false)
---  textX: Where you want your text to start on the x axis (number)
---  textY: Where you want your text to start on the y axis (number)
---  text: The text that will be displayed (string)
---  waitForClick: If you want to wait for the user to click on your button (true or false)
+--  startX: Where you want to start your button on the x axis (number) (required).
+--  startY: Where you want to start your button on the y axis (number) (required).
+--  width: How wide you want your button to be (number) (required).
+--  height: How high you want your button to be (number) (required).
+--  backgroundColor: What color you want your button to be (number) (required).
+--  textColor: What color you want your text to be (number) (required).
+--  flickerOnClick: If the button will turn yellow and back to the backgroundColor (true or false) (required).
+--  textX: Where you want your text to start on the x axis (number) (required).
+--  textY: Where you want your text to start on the y axis (number) (required).
+--  text: The text that will be displayed (string) (required).
+--  waitForClick: If you want to wait for the user to click on your button (true or false) (required).
 function button(startX,startY,width,height,backgroundColor,textColor,flickerOnClick,textX,textY,text,waitForClick)
+    if startX == nil or startX == "" or startY == nil or startY == "" or width == nil or width == "" or height == nil or height == "" or backgroundColor == nil or backgroundColor == "" or textColor == nil or textColor == "" or flickerOnClick == nil or flickerOnClick == "" or textX == nil or textX == "" or textY == nil or textY == "" or text == nil or text == "" or waitForClick == nil or waitForClick == "" then
+      error("Invalid arguments for button()")
+    end
     drawRectangle(startX,startY,width,height,backgroundColor,nil,nil)
     term.setCursorPos(textX,textY)
     term.setBackgroundColor(backgroundColor)
