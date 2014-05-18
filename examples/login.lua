@@ -101,8 +101,7 @@ login()
 
 arg = { ... }
 if arg[1] == "reset" then
-  shell.run("rm", "name.dat")
-  shell.run("rm", "pass.dat")
+  shell.run("rm", "/loginfiles")
   print("Account was reset.")
   print("Press enter...")
   read()
