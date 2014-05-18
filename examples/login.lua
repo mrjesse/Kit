@@ -3,10 +3,14 @@
 -- Made for/with ComputerCraft 1.5 and Kit
 -- Get kit at http://git.io/kitdocs
 
--- Protect your file:
--- os.loadAPI("login.lua")
+-- Get this program by running:
+-- 'pastebin get PZ6euwJJ login-install'
 
--- Run 'login reset' to reset your login.
+-- Protect your file(s):
+-- 'os.loadAPI("login")'
+
+-- Reset your login:
+-- Run 'login reset'.
 
 -- See http://git.io/R5zdXw for the source code of hash.php
 
