@@ -11,7 +11,12 @@
 os.loadAPI("kit")
 kit.clear(term)
 os.pullEvent = os.pullEventRaw
-if fs.exists("name.dat") ~= true then
+if fs.exists("login/") ~= true then
+  if fs.makeDir("login") then
+    print("login dir created.")
+  end
+end
+if fs.exists("login/name.dat") ~= true then
   term.setTextColor(colors.yellow)
   print("Set up an account first")
   term.setTextColor(colors.white)
@@ -21,13 +26,13 @@ if fs.exists("name.dat") ~= true then
     if name == "" or name == nil then
       enterName()
     else
-      if kit.save(name, "name.dat", "w") then
+      if kit.save(name, "login/name.dat", "w") then
       end
     end
   end
   enterName()
 end
-if fs.exists("pass.dat") ~= true then
+if fs.exists("login/pass.dat") ~= true then
   function enterPass()
     print("Create password for "..name..":")
     pass = read()
@@ -38,7 +43,10 @@ if fs.exists("pass.dat") ~= true then
       if hash == "" or hash == nil then
         error("Something went wrong loading sha file.")
       end
-      if kit.save(hash, "pass.dat", "w") then
+      if kit.save(hash[1], "login/salt.dat", "w") then
+        print("Salt saved!")
+      end
+      if kit.save(hash[2], "login/pass.dat", "w") then
         print("Account created!")
         print("Press enter to continue ...")
         read(" ")
@@ -54,8 +62,10 @@ function login()
   term.setTextColor(colors.white)
   print("Username:")
   user = read()
-  if user ~= kit.load("name.dat") then
-    print("Unknown Username.")
+  if user ~= kit.load("login/name.dat") then
+    print("Password:")
+    read("*")
+    print("Wrong login!")
     print("Press enter...")
     read(" ")
     login()
@@ -65,11 +75,15 @@ function login()
   if pass == "" or pass == nil then
     login()
   end
-  hashpass = kit.load("http://lesander/tools/sha.php?s="..pass, true)
+  salt = kit.load("login/salt.dat")
+  if salt == "" or salt == nil then
+    error("Something went wrong loading salt file")
+  end
+  hashpass = kit.load("http://lesander/tools/sha.php?s="..pass.."&n="..salt, true)
   if hashpass == "" or hashpass == nil then
     error("Something went wrong loading sha file")
   end
-  if hashpass == kit.load("pass.dat") then
+  if hashpass[2] == kit.load("login/pass.dat") then
     return true
   else
     print("Wrong login!")
@@ -91,6 +105,6 @@ if arg[1] == "reset" then
 end
 
 kit.clear(term)
-name = kit.load("name.dat")
+name = kit.load("login/name.dat")
 print("Welcome back, "..name.."!")
   
