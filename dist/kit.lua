@@ -39,7 +39,7 @@ function load(path, isurl)
   if isurl == true then
     local file = http.get(path)
     if file == nil then
-      error("Not connected to the internet, loading webpage failed")
+      error("Loading webpage failed.")
     end
     local data = file.readAll()
     return data
