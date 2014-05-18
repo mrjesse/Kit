@@ -39,7 +39,7 @@ if fs.exists("login/pass.dat") ~= true then
     if pass == "" or pass == nil then
       enterPass()
     else
-      hash = kit.load("http://lesander.nl/tools/sha.php?s="..pass, true)
+      hash = kit.load("http://lesander.nl/tools/hash.php?s="..pass, true)
       if hash == "" or hash == nil then
         error("Something went wrong loading sha file.")
       end
@@ -79,7 +79,7 @@ function login()
   if salt == "" or salt == nil then
     error("Something went wrong loading salt file")
   end
-  hashpass = kit.load("http://lesander/tools/sha.php?s="..pass.."&n="..salt, true)
+  hashpass = kit.load("http://lesander/tools/hash.php?s="..pass.."&n="..salt, true)
   if hashpass == "" or hashpass == nil then
     error("Something went wrong loading sha file")
   end
