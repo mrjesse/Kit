@@ -8,6 +8,8 @@
 
 -- Run 'login reset' to reset your login.
 
+-- See http://git.io/R5zdXw for the source code of hash.php
+
 os.loadAPI("kit")
 kit.clear(term)
 os.pullEvent = os.pullEventRaw
