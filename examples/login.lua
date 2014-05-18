@@ -87,7 +87,8 @@ function login()
   if hashpass == "" or hashpass == nil then
     error("Something went wrong loading hash file.")
   end
-  if hashpass[2] == kit.load("loginfiles/pass.dat") then
+  hashpass = textutils.unserialize(hashpass)
+  if hashpass["hash"] == kit.load("loginfiles/pass.dat") then
     return true
   else
     print("Wrong login!")
