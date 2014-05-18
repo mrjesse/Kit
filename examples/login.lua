@@ -12,9 +12,7 @@ os.loadAPI("kit")
 kit.clear(term)
 os.pullEvent = os.pullEventRaw
 if fs.isDir("/loginfiles") ~= true then
-  print("no loginfiles dir found, creating one.")
   if fs.makeDir("/loginfiles") then
-    print("loginfiles dir created.")
   end
 end
 if fs.exists("loginfiles/name.dat") ~= true then
@@ -41,7 +39,6 @@ if fs.exists("loginfiles/pass.dat") ~= true then
     if pass == "" or pass == nil then
       enterPass()
     else
-      hash = {["dev"]="dev"}
       hash = kit.load("http://lesander.nl/tools/hash.php?s="..pass, true)
       if hash == "" or hash == nil then
         error("Something went wrong loading hash file.")
